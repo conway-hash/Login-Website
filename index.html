@@ -4,45 +4,44 @@
 <head>
     <title>Login Site</title>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 
 <body class="bg-dark">
-    <header class="container-xxl border text-white">
-        <div class="row">
-            <img src="Logo.png" alt="" class="float-start w-25">
+    <header class="container-fluid border text-white">
+        <div class="row d-flex flex-row">
+            <img src="Logo.png" alt="" class="float-start" style="height: 150px; width: 210px;">
             <h1 class="text-uppercase fs-1 fw-bold">QuickChat</h1>
         </div>
     </header>
 
-    <div class=" container-xxl border">
-        <div class="row justify-content-between">
-            <div class="col-md-6 bg-success rounded text-center">
-                <label class="text-white text-uppercase fs-4 fw-bold">Create new account</label>
-                <form>
-                    <input type="text" placeholder="Username">
-                    <input type="email" placeholder="Email">
-                    <input type="password" placeholder="Password">
-                    <input type="password" placeholder="Repeat Password">
-                    <input type="submit" value="Register">
+    <div class=" container-fluid border">
+        <div class="row justify-content-around">
+            <div class="col-md-4 bg-success rounded-5 text-center m-5" style="height: 500px;">
+                <label class="text-white text-uppercase fs-3 fw-bold my-4 ">Create new account</label>
+                <form class="col d-flex flex-column justify-content-center ">
+                    <input class="m-2" type="text" placeholder="Username">
+                    <input class="m-2" type="email" placeholder="Email">
+                    <input class="m-2" type="password" placeholder="Password">
+                    <input class="m-2" type="password" placeholder="Repeat Password">
+                    <input class="mt-auto" type="submit" value="Register">
                 </form>
             </div>
 
-            <div class="col-md-6 bg-danger rounded text-center">
-                <label class="text-white text-uppercase fs-4 fw-bold">Login to account</label>
-                <form>
-                    <input type="email" placeholder="Email">
-                    <input type="password" placeholder="Password">
-                    <input type="submit" value="Login">
+            <div class="col-md-4 bg-danger rounded-5 text-center m-5" style="height: 500px;">
+                <label class="text-white text-uppercase fs-3 fw-bold my-4">Login to account</label>
+                <form class="col d-flex flex-column justify-content-center">
+                    <input class="m-2" type="email" placeholder="Email">
+                    <input class="m-2" type="password" placeholder="Password">
+                    <input class="mt-auto " type="submit" value="Login">
                 </form>
             </div>
         </div>
     </div>
 
-    <footer class="container-xxl border bg-light">
-        <div class="row ">
+    <footer class="container-fluid border bg-light">
+        <div class="row">
             <div class="col text-center">
                 <h2>
                     Mobile App
