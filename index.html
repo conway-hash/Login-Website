@@ -13,60 +13,67 @@
         <div class="image-div">
             <img src="Logo.png" alt="Logo">
         </div>
-        <h1 style="color: #bbd0e7;">Quick</h1>
-        <h1 style="color: #012348;">Chat</h1>
+        <div class="header-div text-s-1 text-1">
+            <h1 style="color: #bbd0e7;">Quick</h1>
+            <h1 style="color: #012348;">Chat</h1>
+        </div>
     </header>
     <div class="container">
-        <div class="box">
-            <form class="register">
-                <label>Create new account</label>
-                <input type="text" placeholder="Username" required>
-                <input type="email" placeholder="Email" required>
-                <input type="password" placeholder="Password" required>
-                <input type="password" placeholder="Repeat Password" required>
-                <input type="submit" value="Register">
-            </form>
-        </div>
-        <div class="box">
-            <form class="login">
-                <label>Login to account</label>
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
-                <input type="submit" value="Login">
-            </form>
+        <div>
+            <div class="col-6 col-s-8 box">
+                <form class="register">
+                    <label>Create new account</label>
+                    <input type="text" placeholder="Username" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <input type="password" placeholder="Repeat Password" required>
+                    <input type="submit" value="Register">
+                </form>
+            </div>
+            <div class="col-6 col-s-8 box">
+                <form class="login">
+                    <label>Login to account</label>
+                    <input type="email" placeholder="Email">
+                    <input type="password" placeholder="Password">
+                    <input type="submit" value="Login">
+                </form>
+            </div>
         </div>
     </div>
+    </div>
     <footer>
-        <div class="footerclass">
-            <h2>
-                QuickChat
-            </h2>
-            <p>
-                A chat for busy people.
-            </p>
-        </div>
-        <div class="footerclass">
-            <h2>
-                Terms
-            </h2>
-            <a>
-                Privacy Policy
-            </a>
-            <a>
-                Terms of Use
-            </a>
-        </div>
-        <div class="footerclass">
+        <div class="flex">
+            <div class="footerclass col-3">
+                <h2>
+                    QuickChat
+                </h2>
+                <p>
+                    A chat for busy people.
+                </p>
+            </div>
+            <div class="footerclass col-3">
+                <h2>
+                    Terms
+                </h2>
+                <a>
+                    Privacy Policy
+                </a>
+                <a>
+                    Terms of Use
+                </a>
+            </div>
+            <div class="footerclass col-3">
 
-            <h2>
-                Mobile App
-            </h2>
-            <a>
-                Google Play
-            </a>
-            <a>
-                AppStore
-            </a>
+                <h2>
+                    Mobile App
+                </h2>
+                <a>
+                    Google Play
+                </a>
+                <a>
+                    AppStore
+                </a>
+            </div>
         </div>
     </footer>
 </body>
