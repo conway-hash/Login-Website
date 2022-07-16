@@ -1,4 +1,5 @@
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
@@ -9,7 +10,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'Inter';
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 header {
@@ -22,8 +23,18 @@ header {
     padding: 0.5rem;
 }
 
+.image-div {
+    margin: 20px;
+    min-width: 90px;
+}
+
 img {
-    padding: 1vh;
+    width: 100%;
+}
+
+h1 {
+    text-transform: uppercase;
+    letter-spacing: 5px;
 }
 
 .container {
@@ -32,6 +43,8 @@ img {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    background-image: linear-gradient(to right, #bbd0e7, #012348);
+    transform: skewY(-4deg);
 }
 
 label {
@@ -74,24 +87,22 @@ input[type=submit]:hover {
     background-color: #bbd0e7;
 }
 
-.container {
-    background-image: linear-gradient(to right, #FFFFFF, #012348);
-    transform: skewY(-2deg);
-}
-
 .box {
     background: rgba(1, 35, 75, 0.4);
     border-radius: 25px;
-    height: 75%;
+    height: 60%;
     width: 25%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: 0.5s;
 }
 
-.login-box {
-    transform: translateY(-30px);
+.box:hover {
+    transform: translate(10px, 10px);
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: -10px -10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .register {
@@ -109,10 +120,9 @@ input[type=submit]:hover {
 }
 
 footer {
-    position: absolute;
-    bottom: 3rem;
     width: 100%;
     height: 10vh;
+    bottom: 3rem;
     background: white;
     color: #012348;
     display: grid;
