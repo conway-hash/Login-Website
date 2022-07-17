@@ -5,6 +5,15 @@
     width: 100%;
 }
 
+[class*="col-mobile"] {
+    width: 80%;
+}
+
+[class*="scroll"] {
+    overflow-y: scroll;
+}
+
+
 @media only screen and (min-width: 600px) {
 
     /* For tablets: */
@@ -61,9 +70,13 @@
     }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 900px) {
 
     /* For desktop: */
+    .noscroll {
+        overflow-y: hidden;
+    }
+
     .text-1 {
         font-size: 30px;
     }
@@ -117,6 +130,24 @@
     }
 }
 
+/*PLACEHOLDER*/
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: black;
+    opacity: 1;
+    /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: black;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: black;
+}
+
 /*BASIC RESET AND BODY*/
 * {
     box-sizing: border-box;
@@ -127,9 +158,8 @@
 body {
     width: 100%;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
     font-family: 'Inter';
+    transform: skewY(-2deg);
 }
 
 /*HEADER*/
@@ -140,16 +170,16 @@ header {
     justify-content: flex-start;
     font-size: 20px;
     padding: 0.5rem;
-    transform: skewY(-2deg);
 }
 
 .image-div {
     margin: 20px;
     min-width: 90px;
+    transform: skewY(2deg);
 }
 
 .header-div {
-    display: flex;
+    transform: skewY(2deg);
 }
 
 img {
@@ -157,27 +187,25 @@ img {
 }
 
 h1 {
+    color: black;
     text-transform: uppercase;
     letter-spacing: 5px;
 }
 
 /*MAIN*/
 .container {
-    background-image: linear-gradient(to right, #bbd0e7, #012348);
+    background-image: linear-gradient(to bottom right, rgba(251, 238, 151), rgba(173, 237, 213));
     width: 100%;
-    height: 120vh;
     display: flex;
-    align-items: center;
-    transform: skewY(-2deg);
 }
 
 .container-div {
     width: 100%;
+    height: 100%;
 }
 
 .box {
     float: left;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -185,9 +213,8 @@ h1 {
 }
 
 .box-div {
+    background: rgba(0, 0, 0, 0.2);
     border-radius: 25px;
-    padding: 1rem;
-    margin: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -196,8 +223,7 @@ h1 {
 }
 
 .box-div:hover {
-    transform: translate(10px, 10px);
-    background-color: rgba(255, 255, 255, 0.2);
+    transform: translate(15px, 15px);
     box-shadow: -10px -10px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -210,18 +236,19 @@ form {
 }
 
 label {
-    color: #FFFFFF;
+    color: black;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 25px;
-    margin: 1em;
+    margin: 1rem;
 }
 
 input {
-    width: 80%;
-    padding: 2em 2em;
-    margin: 1em;
-    border: 0px;
+    width: 90%;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 2rem 2rem;
+    margin: 1rem;
+    border: 1px dashed black;
     border-radius: 25px;
     box-sizing: border-box;
     transition: 0.5s;
@@ -229,13 +256,13 @@ input {
 }
 
 input:focus {
-    background-color: #bbd0e7;
+    background-color: white;
 }
 
 input[type=submit] {
-    width: 50%;
-    background-color: white;
-    color: #012348;
+    width: 60%;
+    background-color: rgba(0, 0, 0, 0);
+    color: black;
     padding: 1em 1em;
     margin: 1em;
     border: none;
@@ -243,10 +270,12 @@ input[type=submit] {
     cursor: pointer;
     text-transform: uppercase;
     letter-spacing: 1px;
+    border: 1px dashed black;
+    transition: 0.5s;
 }
 
 input[type=submit]:hover {
-    background-color: #bbd0e7;
+    background-color: rgba(251, 238, 151);
 }
 
 /*FOOTER AND LINKS*/
@@ -255,7 +284,6 @@ footer {
     width: 100%;
     display: flex;
     justify-content: center;
-    transform: skewY(-2deg);
 }
 
 .footer-div {
@@ -273,9 +301,10 @@ footer {
 
 .footerclass h2 {
     margin-bottom: 0.5em;
-    color: #012348;
+    text-transform: uppercase;
+    color: black;
 }
 
 .footerclass :where(a, p) {
-    color: rgba(1, 35, 75, 0.7);
+    color: rgba(0, 0, 0, 0.4);
 }
