@@ -1,153 +1,3 @@
-/*RESPONSIVENESS*/
-
-/* For mobile phones: */
-[class*="col-"] {
-    width: 100%;
-}
-
-[class*="col-mobile"] {
-    width: 80%;
-}
-
-[class*="scroll"] {
-    overflow-y: scroll;
-}
-
-
-@media only screen and (min-width: 600px) {
-
-    /* For tablets: */
-    .text-s-1 {
-        font-size: 25px;
-    }
-
-    .col-s-1 {
-        width: 8.33%;
-    }
-
-    .col-s-2 {
-        width: 16.66%;
-    }
-
-    .col-s-3 {
-        width: 25%;
-    }
-
-    .col-s-4 {
-        width: 33.33%;
-    }
-
-    .col-s-5 {
-        width: 41.66%;
-    }
-
-    .col-s-6 {
-        width: 50%;
-    }
-
-    .col-s-7 {
-        width: 58.33%;
-    }
-
-    .col-s-8 {
-        width: 66.66%;
-    }
-
-    .col-s-9 {
-        width: 75%;
-    }
-
-    .col-s-10 {
-        width: 83.33%;
-    }
-
-    .col-s-11 {
-        width: 91.66%;
-    }
-
-    .col-s-12 {
-        width: 100%;
-    }
-}
-
-@media only screen and (min-width: 900px) {
-
-    /* For desktop: */
-    .noscroll {
-        overflow-y: hidden;
-    }
-
-    .text-1 {
-        font-size: 30px;
-    }
-
-    .col-1 {
-        width: 8.33%;
-    }
-
-    .col-2 {
-        width: 16.66%;
-    }
-
-    .col-3 {
-        width: 25%;
-    }
-
-    .col-4 {
-        width: 33.33%;
-    }
-
-    .col-5 {
-        width: 41.66%;
-    }
-
-    .col-6 {
-        width: 50%;
-    }
-
-    .col-7 {
-        width: 58.33%;
-    }
-
-    .col-8 {
-        width: 66.66%;
-    }
-
-    .col-9 {
-        width: 75%;
-    }
-
-    .col-10 {
-        width: 83.33%;
-    }
-
-    .col-11 {
-        width: 91.66%;
-    }
-
-    .col-12 {
-        width: 100%;
-    }
-}
-
-/*PLACEHOLDER*/
-::placeholder {
-    /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: black;
-    opacity: 1;
-    /* Firefox */
-}
-
-:-ms-input-placeholder {
-    /* Internet Explorer 10-11 */
-    color: black;
-}
-
-::-ms-input-placeholder {
-    /* Microsoft Edge */
-    color: black;
-}
-
 /*BASIC RESET AND BODY*/
 * {
     box-sizing: border-box;
@@ -160,6 +10,7 @@ body {
     height: 100vh;
     font-family: 'Inter';
     transform: skewY(-2deg);
+    overflow: overlay;
 }
 
 /*HEADER*/
@@ -224,6 +75,7 @@ h1 {
 
 .box-div:hover {
     transform: translate(15px, 15px);
+    background: rgba(0, 0, 0, 0.25);
     box-shadow: -10px -10px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -237,6 +89,7 @@ form {
 
 label {
     color: black;
+    text-align: center;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 25px;
@@ -248,15 +101,21 @@ input {
     background-color: rgba(0, 0, 0, 0);
     padding: 2rem 2rem;
     margin: 1rem;
-    border: 1px dashed black;
+    border: 1px solid black;
     border-radius: 25px;
     box-sizing: border-box;
     transition: 0.5s;
     outline: none;
 }
 
-input:focus {
+input:hover {
+    transform: translate(5px, 5px);
     background-color: white;
+    box-shadow: -10px -10px 20px rgba(0, 0, 0, 0.1);
+}
+
+input:focus {
+    border: 2px solid black;
 }
 
 input[type=submit] {
@@ -270,12 +129,15 @@ input[type=submit] {
     cursor: pointer;
     text-transform: uppercase;
     letter-spacing: 1px;
-    border: 1px dashed black;
-    transition: 0.5s;
+    border: 1px solid black;
 }
 
 input[type=submit]:hover {
     background-color: rgba(251, 238, 151);
+}
+
+input[type=submit]:focus {
+    border: 2px solid black;
 }
 
 /*FOOTER AND LINKS*/
@@ -307,4 +169,82 @@ footer {
 
 .footerclass :where(a, p) {
     color: rgba(0, 0, 0, 0.4);
+}
+
+/*RESPONSIVENESS*/
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+
+[class*="col-mobile"] {
+    width: 80%;
+}
+
+[class*="text"] {
+    font-size: 15px;
+}
+
+/* For tablets: */
+@media only screen and (min-width: 600px) {
+    .text-s-1 {
+        font-size: 25px;
+    }
+
+    .col-s-6 {
+        width: 50%;
+    }
+
+    .col-s-12 {
+        width: 100%;
+    }
+}
+
+/* For desktop: */
+@media only screen and (min-width: 900px) {
+    .text-1 {
+        font-size: 30px;
+    }
+
+    .col-4 {
+        width: 33.33%;
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+}
+
+/*PLACEHOLDER*/
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: black;
+    opacity: 1;
+    /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: black;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: black;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 5px solid transparent;
+    border-radius: 20px;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.5);
 }
